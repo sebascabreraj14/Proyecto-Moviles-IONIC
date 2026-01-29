@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Reprise Dinámico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item lines="outline" class="ion-margin-bottom">
+    <ion-label position="floating">Pegar link de YouTube</ion-label>
+    <ion-input type="url" [(ngModel)]="linkPersonalizado" placeholder="https://youtube.com/..."></ion-input>
+    <ion-button slot="end" (click)="navegarAVideo(linkPersonalizado)">
+      <ion-icon name="play-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <h3 class="ion-padding-start">Canales Recomendados</h3>
+
+  <ion-card *ngFor="let item of seccionesDeportivas">
+    <img [src]="item.img" style="height: 150px; width: 100%; object-fit: cover;" />
+    <ion-card-header>
+      <ion-card-title>{{ item.titulo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Accede a las mejores repeticiones de {{ item.titulo }} en vivo.
+      <ion-button expand="block" fill="outline" (click)="navegarAVideo(item.videoUrl)" class="ion-margin-top">
+        Ir al Canal
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

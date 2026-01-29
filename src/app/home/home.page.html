@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Sports App Ecuador</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content class="ion-padding ion-text-center">
+  <div class="welcome-container">
+    <ion-icon name="trophy" size="large" color="warning"></ion-icon>
+    <h1>¡Bienvenido!</h1>
+    <p>¿Qué deporte quieres ver hoy?</p>
   </div>
+
+  <ion-button routerLink="/reprise" expand="block" shape="round" color="tertiary" class="main-button">
+    <ion-icon name="play-circle-outline" slot="start"></ion-icon>
+    VER REPRISE DE PARTIDOS
+  </ion-button>
+
+  <ion-button routerLink="/login" fill="clear" color="medium">
+    Cerrar Sesión
+  </ion-button>
 </ion-content>

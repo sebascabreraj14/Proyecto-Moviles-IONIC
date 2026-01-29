@@ -1,22 +1,17 @@
-import { Routes } from '@angular/router';
+import { Routes } from '@angular/router'; // <--- ESTA LÍNEA ES OBLIGATORIA
 
 export const routes: Routes = [
-  {
-    path: 'splash',
-    loadComponent: () => import('./splash/splash.page').then( m => m.SplashPage)
-  },
   {
     path: 'home',
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
   },
   {
-    path: '',
-    redirectTo: 'splash',
-    pathMatch: 'full',
+    path: 'reprise',
+    loadComponent: () => import('./reprise/reprise.page').then((m) => m.ReprisePage),
   },
   {
-    path: 'login',
-    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
-
 ];

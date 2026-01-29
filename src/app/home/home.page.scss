@@ -1,27 +1,23 @@
-#container {
-  text-align: center;
+.welcome-container {
+  margin-top: 25%; // Baja el contenido para que no pegue al header
+  margin-bottom: 40px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  ion-icon {
+    font-size: 80px; // Tamaño grande para el icono de trofeo
+  }
+
+  h1 {
+    font-weight: 800; // Letra más gruesa para el título
+    margin-top: 10px;
+  }
+  
+  p {
+    color: var(--ion-color-medium);
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.main-button {
+  height: 60px; // Hace el botón más alto y fácil de presionar
+  font-weight: bold;
+  --box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }

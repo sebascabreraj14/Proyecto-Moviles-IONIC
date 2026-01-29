@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router'; // <--- 1. IMPORTAR ESTO
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
+  standalone: true,
+  imports: [
+    IonicModule, 
+    RouterModule // <--- 2. AGREGAR ESTO AQUÍ
+  ],
 })
 export class HomePage {
   constructor() {}
