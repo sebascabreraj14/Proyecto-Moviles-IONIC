@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes } from '@angular/router'; // <--- ESTA LÍNEA ES OBLIGATORIA
 
 export const routes: Routes = [
   {
@@ -6,13 +6,17 @@ export const routes: Routes = [
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
   },
   {
+    path: 'reprise',
+    loadComponent: () => import('./reprise/reprise.page').then((m) => m.ReprisePage),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
   },
   {
-    path: 'splash',
-    loadComponent: () => import('./splash/splash.page').then( m => m.SplashPage)
+    path: 'login',
+    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
   },
-  // Borra las rutas de settings, vivo y envivo que causaban el error X [ERROR]
+
 ];
